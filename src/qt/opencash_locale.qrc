@@ -1,0 +1,36 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/opencash_bg.qm</file>
+        <file alias="ca">locale/opencash_ca.qm</file>
+        <file alias="cs">locale/opencash_cs.qm</file>
+        <file alias="da">locale/opencash_da.qm</file>
+        <file alias="de">locale/opencash_de.qm</file>
+        <file alias="en">locale/opencash_en.qm</file>
+        <file alias="en_US">locale/opencash_en_US.qm</file>
+        <file alias="eo">locale/opencash_eo.qm</file>
+        <file alias="es">locale/opencash_es.qm</file>
+        <file alias="es_ES">locale/opencash_es_ES.qm</file>
+        <file alias="fi">locale/opencash_fi.qm</file>
+        <file alias="fr_FR">locale/opencash_fr_FR.qm</file>
+        <file alias="hi_IN">locale/opencash_hi_IN.qm</file>
+        <file alias="hr">locale/opencash_hr.qm</file>
+        <file alias="hr_HR">locale/opencash_hr_HR.qm</file>
+        <file alias="it">locale/opencash_it.qm</file>
+        <file alias="ja">locale/opencash_ja.qm</file>
+        <file alias="ko_KR">locale/opencash_ko_KR.qm</file>
+        <file alias="lt_LT">locale/opencash_lt_LT.qm</file>
+        <file alias="nl">locale/opencash_nl.qm</file>
+        <file alias="pl">locale/opencash_pl.qm</file>
+        <file alias="pt">locale/opencash_pt.qm</file>
+        <file alias="pt_BR">locale/opencash_pt_BR.qm</file>
+        <file alias="ro_RO">locale/opencash_ro_RO.qm</file>
+        <file alias="ru">locale/opencash_ru.qm</file>
+        <file alias="sk">locale/opencash_sk.qm</file>
+        <file alias="sv">locale/opencash_sv.qm</file>
+        <file alias="tr">locale/opencash_tr.qm</file>
+        <file alias="uk">locale/opencash_uk.qm</file>
+        <file alias="vi">locale/opencash_vi.qm</file>
+        <file alias="zh_CN">locale/opencash_zh_CN.qm</file>
+        <file alias="zh_TW">locale/opencash_zh_TW.qm</file>
+    </qresource>
+</RCC>

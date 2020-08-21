@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OCASHCOIN
+Comment=OCASHCOIN P2P Cryptocurrency
+Comment[fr]=OCASHCOIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=OCASHCOIN, eşten eşe kriptografik sanal para birimi
+Exec=opencash-qt %u
+Terminal=false
+Type=Application
+Icon=opencash128
+MimeType=x-scheme-handler/opencash;
+Categories=Office;Finance;

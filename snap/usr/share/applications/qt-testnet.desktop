@@ -1,0 +1,14 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+
+[Desktop Entry]
+Type=Application
+Version=5.2.00
+Encoding=UTF-8
+Name=OpenCASH-Qt Testnet
+Icon=${SNAP}/qt-testnet.ico
+MimeType=x-scheme-handler/opencash;
+Exec=opencash.qt-testnet --testnet %u
+Terminal=false
+Categories=Office;Finance;
+Comment=OpenCASH Core Regression Test (by OpenCASH-Project)
+Keywords=internet;opencash;testnet;qt;crypto;currency;snap;snapcraft;OCASHCOIN-Project;daemon;cli;qt;zerocoin;zocash
