@@ -53,14 +53,14 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("")); //Hopefully the final checkpoint before we move to the new chain
+    (0, uint256("9f639c1d02c2e79fed84e48d8696c0400a49c32757b609eba2b2f8071e90ebcf")); //Hopefully the final checkpoint before we move to the new chain
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    0, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1597932542, // * UNIX timestamp of last checkpoint block
+    1,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    0        // * estimated number of transactions per day after checkpoint
+    1        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -115,7 +115,7 @@ public:
         nEnforceBlockUpgradeMajority = 8100; // 75%
         nRejectBlockOutdatedMajority = 10260; // 95%
         nToCheckBlockUpgradeMajority = 10800; // Approximate expected amount of blocks in 7 days (1440*7.5)
-        nMinerThreads = 0;
+        nMinerThreads = 1;
         nTargetTimespan = 45 * 60; // OPENCASH
         nTargetSpacing = 45;  // OPENCASH 45 seconds full speed
         nMaturity = 10;
@@ -123,7 +123,7 @@ public:
         nMaxMoneyOut = 2100000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPoWBlock = 300;
+        nLastPoWBlock = 600;
         //nModifierUpdateBlock = 1;
         nZerocoinStartHeight = 0;
         nZerocoinStartTime = 0; // October 17, 2017 4:30:00 AM
@@ -158,35 +158,21 @@ public:
         genesis.nNonce = 384124;
 
         hashGenesisBlock = genesis.GetHash();
-        if (regenerate) {
-            hashGenesisBlock = uint256S("");
-            genesis.nNonce = 0;
-            if (true && (genesis.GetHash() != hashGenesisBlock)) {
-                while (genesis.GetHash() > bnProofOfWorkLimit)
-                {
-                    ++genesis.nNonce;
-                    if (genesis.nNonce == 0)
-                    {
-                        ++genesis.nTime;
-                    }
-                }
-                std::cout << "// Mainnet ---";
-                std::cout << " nonce: " << genesis.nNonce;
-                std::cout << " time: " << genesis.nTime;
-                std::cout << " hash: 0x" << genesis.GetHash().ToString().c_str();
-                std::cout << " merklehash: 0x"  << genesis.hashMerkleRoot.ToString().c_str() <<  "\n";
-            }
-        } else {
-           assert(hashGenesisBlock == uint256("0x9f639c1d02c2e79fed84e48d8696c0400a49c32757b609eba2b2f8071e90ebcf"));
-           assert(genesis.hashMerkleRoot == uint256("0x36826ac4d9f1583549a6e1581132d30ff9fe069a7826f927bfd285bd5b4d2f92"));
-        }
 
+           assert(hashGenesisBlock == uint256("9f639c1d02c2e79fed84e48d8696c0400a49c32757b609eba2b2f8071e90ebcf"));
+           assert(genesis.hashMerkleRoot == uint256("36826ac4d9f1583549a6e1581132d30ff9fe069a7826f927bfd285bd5b4d2f92"));
+        
+
+
+        vSeeds.push_back(CDNSSeedData("node1.45.77.104.32", "node1.45.77.104.32"));
+        vSeeds.push_back(CDNSSeedData("node2.108.61.245.176", "node2.108.61.245.176"));
+ 
 
        
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 115); // OpenCASH's wallet address starts with a o
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 28); // C
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 0); // 
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 51); // 
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x05)(0x2C)(0x24)(0x43).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x05)(0x2D)(0x35)(0x5A).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
