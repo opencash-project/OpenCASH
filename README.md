@@ -1,6 +1,6 @@
 # OpenCASH
 
-Open Source cryptocurrency created for the non-profit community 
+**Open Source cryptocurrency created for the non-profit community** 
 
 # About OpenCASH
 
