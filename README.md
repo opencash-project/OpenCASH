@@ -27,7 +27,7 @@ PoS Breakdow 75% Masternodes / 25% Stakers
 
 # OpenCASH Reward Rules POW/POS/MNC
 
-Blocks                             Blocks                                         Reward
+Blocks                                                      Blocks                                                                   Reward
 
 0                ---->              20.000                                         5.500 OCASH
 
